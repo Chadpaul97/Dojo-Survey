@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results</title>
+    <style>
+        body {
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .resultpage {
+            border: 2px solid black;
+            width: 700px;
+            height: 600px;
+        }
+
+        .result2 {
+            font-size: 25px;
+            display: flex;
+            justify-content: space-between;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="resultpage">
+        <h1>Submitted Info</h1>
+        <div class="result">
+            {%for u in user %}
+            <div class="result2">
+                <p>Name:</p>
+                <p>{{u["name"]}}</p>
+            </div>
+            <div class="result2">
+                <p>Dojo Location:</p>
+                <p>{{u["location"]}}</p>
+            </div>
+            <div class="result2">
+                <p>Favorite Language:</p>
+                <p>{{u["language"]}}</p>
+            </div>
+            <div class="result2">
+                <p>Comment:</p>
+                <p>{{u["comments"]}}</p>
+            </div>
+            {% endfor %}
+            <a href="/clear"><button type="button" class="btn btn-primary">go back</button></a>
+        </div>
+    </div>
+</body>
+
+</html>

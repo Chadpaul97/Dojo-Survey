@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <meta http-equiv="refresh" content="10; http://localhost:5000/"> -->
+    <title>Dojo Survey</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+        }
+
+        .main {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 30px;
+            border: 2px solid black;
+            width: 700px;
+            height: 600px;
+        }
+
+        .survey {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 30px 20px 0px 20px;
+        }
+
+        .btn {
+            font-size: 20px;
+            height: 30px;
+            width: 110px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <form action="/results" method="post">
+            <div class="survey">
+                <label for="name">Your Name</label>
+                <input type="name" name="name" id="name">
+            </div>
+            <div class="survey">
+                <p>Dojo location</p>
+                <select name="location" class="btn">
+                    <option value="sanjose">San Jose</option>
+                    <option value="seattle">Seattle</option>
+                    <option value="chicago">Chicago</option>
+                </select>
+            </div>
+            <div class="survey">
+                <p>Favorite language</p>
+                <select name="language" class="btn">
+                    <option value="python">Python</option>
+                    <option value="javascript">Javascript</option>
+                    <option value="html">Html</option>
+                </select>
+            </div>
+            <div class="comments">
+                <p>Comment (optional):</p>
+                <textarea name="comments" id="comments" cols="80" rows="10"></textarea>
+                <button type="submit" class="submit">Submit</button>
+            </div>
+
+        </form>
+    </div>
+</body>
+
+</html>
